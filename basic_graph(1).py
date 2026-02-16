@@ -1,7 +1,8 @@
 import matplotlib.pyplot as plt
+import numpy as np
 
-x = ["monday","tuesday","wednesday","thrusday","friday","saturday","sunday"]
-y = [10420,20000,3300,100000,5400,21050,10000]
+x = np.array(["monday","tuesday","wednesday","thrusday","friday","saturday","sunday"])
+y = np.array([10420,20000,3300,100000,5400,21050,10000])
 # plt.plot(x,y)#show version
 plt.plot(x,y,color="red",linestyle="--",linewidth=4,marker="o",label="25 sale")
 plt.title("weeklysales",fontsize=12)
