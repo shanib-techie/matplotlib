@@ -10,4 +10,6 @@ ax[1].set_title("bar chart")
 # fig,ax = plt.subplot(2,1,shaex=True)
 
 plt.tight_layout()
+# plt.savefig("compare_graph.pdf",dpi=300,bbox_inches="tight")
+# 
 plt.show()
