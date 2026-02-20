@@ -6,13 +6,17 @@ print("overall : ",df.describe())
 print(df)
 print("unique va",df["Product"].unique())
 k = df["Product"]
-plt.xlabel("products ")
-plt.ylabel("count of eeach product")
-print("count of product")
-plt.hist(k,bins=6,color="pink",edgecolor="black") # iss row meyeh perticular work kitni baar aya h graph me ajata h
+sab_ka_mean = df.mean(numeric_only=True)
+print("sabka mean\n",sab_ka_mean)
+
+# plt.xlabel("products ")
+# plt.ylabel("count of eeach product")
+# print("count of product")
+# plt.hist(k,bins=6,color="pink",edgecolor="black") # iss row meyeh perticular work kitni baar aya h graph me ajata h
 
 print(df["Product"].value_counts())
-
+print("sales of each store : ")
+print(df["Location"].value_counts())
 # print(df["Product"])
 # score = np.array([23,44,2,1,33,44,55,6,44,3,76,88,8,77,5,44,3,5,43,2,44,6,21,23,23,4,5,77,65,43,3,2,22,11,77,6,55,4,33,7,77,52,22,46])
 # print(score)
@@ -20,7 +24,11 @@ print(df["Product"].value_counts())
 
 
 # print("average: ",score.mean())
-
+plt.hist(df["Location"],bins=4,color="pink",edgecolor="black")
+plt.grid()
+plt.title("revenue fro each store")
+plt.xlabel("stores")
+plt.ylabel("number of costumer")
 # plt.hist(score,bins=6,color="red",edgecolor="black")
 # plt.xlabel("SCORE RANGE")
 # plt.ylabel("COUNT OF SCORE GROUP")
